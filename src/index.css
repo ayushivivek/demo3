@@ -1,13 +1,254 @@
 body {
+  background-color: #fff7e3;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.header {
+  background-color: #333;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.scroll-btn {
+  background-color: #fff;
+  color: gray;
+  border: none;
+  padding: 9px 9px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: background-color 0.2s;
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-btn:hover {
+  background-color: #777;
+}
+
+.scroll-container {
+  margin-top: 10px;
+  flex-grow: 1;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  margin: 0 10px; /* Adding some margin between the buttons and the scrollable content */
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 0; /* For Chrome, Safari, and Opera */
+}
+
+.scroll-item {
+  display: inline-block;
+  color: white;
+  padding: 10px 15px;
+  /* border-right: 1px solid #555; */
+  font-size: 16px;
+  margin: 0px 5px 0px 5px;
+  background-color: #243a52;
+  border-radius: 20px;
+}
+
+.scroll-item:last-child {
+  border-right: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 50px 40px 10px 40px;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #20324b;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.cards {
+  padding: 0px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.sub-heading {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: none;
+  }
+
+  .card {
+    flex-basis: 100%;
+  }
+}
+/* ... existing styles ... */
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.pagination {
+  margin: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.page-button {
+  background-color: #ffdcb5;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.page-button:hover {
+  background-color: #ddd;
+}
+
+.page-button.active {
+  background-color: #ff9d1a;
+  color: #fff;
+}
+/* ... other styles ... */
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: center;
+  width: calc(25% - 55px);
+}
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  /* ... other responsive styles ... */
+
+  .card {
+    flex-basis: 100%; /* On mobile, each card takes the full width */
+  }
+  .popular {
+    font-size: 25px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 50px 15px 10px 15px;
+  }
+}
+.dd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.zeromargin {
+  margin: 0;
+}
+.explore {
+  font-size: 16px;
+}
+.popular {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.popular::after {
+  content: "";
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  background-color: orange;
+  width: 140px;
+  height: 1px;
+  bottom: 0;
+}
+.scroll-item.active {
+  background-color: #ff9415;
+}
+.ibps-rrb {
+  text-shadow: 2px 2px 2px #ff9415;
+  color: #333333;
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.out-btn {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 35px;
+}
+.out-btn a {
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  margin: 0px 5px 0px 5px;
+  background-color: #ff9415;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: none;
+  }
+
+  .card {
+    flex-basis: 34%;
+  }
+  .scroll-btn {
+    display: none !important;
+  }
+  .header {
+    background-color: transparent;
+  }
 }
