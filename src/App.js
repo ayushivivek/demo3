@@ -26,25 +26,12 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     overflow: "Hidden",
   },
-  // scrollContainer: {
-  //   overflowX: "auto",
-  //   display: "flex",
-  //   flexGrow: 1,
-  // },
-  // scrollItem: {
-  //   padding: theme.spacing(1),
-  //   margin: theme.spacing(1),
-  //   cursor: "pointer",
-  // },
+
   active: {
     backgroundColor: "#ff9d1a",
     color: "#fff",
   },
-  // sidebar: {
-  //   width: "100%",
-  //   marginBottom: "20px",
-  //   boxShadow: "none",
-  // },
+
   content: {
     flex: "1 1",
     display: "flex",
