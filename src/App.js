@@ -68,7 +68,7 @@ function App() {
           <div className="sub-heading">CBO</div>
 
           <div className="out-btn">
-            <a>Out</a>
+            <p>Out</p>
           </div>
 
           <div className="ibps-rrb">3330+</div>
