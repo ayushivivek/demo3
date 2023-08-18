@@ -195,6 +195,17 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       backgroundColor: "#777",
     },
+    "@media (max-width: 767px)": {
+      display: "none",
+    },
+  },
+  pageButton: {
+    backgroundColor: "#ffdcb5",
+    border: "none",
+    cursor: "pointer",
+    transition: "background-color 0.2s",
+    borderRadius: "10px",
+    padding: "10px",
   },
 }));
 
@@ -297,7 +308,9 @@ function App() {
           <Button
             key={number}
             variant="contained"
-            className={currentPage === number + 1 ? classes.active : ""}
+            className={`${currentPage == number + 1 ? classes.active : ""}${
+              classes.pageButton
+            } `}
             onClick={() => setCurrentPage(number + 1)}
           />
         ))}
